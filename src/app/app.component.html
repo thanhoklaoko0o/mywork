@@ -1,0 +1,28 @@
+<button type="button" class="btn btn-primary" (click)="showMessage($event)">Click me</button>
+
+<br><br>
+<div class="col-sm-6">
+  <select class="form-control" (change) = "changeMonth($event)">
+    <option *ngFor="let item of months">{{ item }}</option>
+  </select>
+</div>
+<h1>{{ count }}</h1>
+<button type="button" class="btn btn-success" (click)="countSum()">count</button>
+<br><br><br><br>
+<button type="button" class="btn btn-danger" (dblclick)="dbClick($event)">double click</button>
+<hr>
+<h1>{{ countABC }}</h1>
+<button type="button" class="btn btn-primary" (click)="clickme()">click me</button>
+<button type="button" class="btn btn-success"(dblclick)="doubleClick()"> double click</button>
+<hr>
+<h2>{{ username }}</h2>
+<div class="form-group">
+  <label>Username</label>
+  <input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">
+</div>
+<br>
+<h3>ngmodel- tow way binding</h3>
+<div class="form-group">
+  <label>Ho ten ngmodel : {{ name }}</label>
+  <input type="text" class="form-control" [(ngModel)]="name">
+</div>
